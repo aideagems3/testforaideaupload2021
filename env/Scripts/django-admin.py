@@ -1,4 +1,4 @@
-#!d:\gems#3\projectuploadpic\before_aideaupload_140864\env\scripts\python.exe
+#!d:\gems#3\projectuploadpic\testappupload\env\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

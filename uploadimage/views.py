@@ -13,6 +13,8 @@ from rest_framework.decorators import permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import HttpResponse
+
 
 from rest_framework.status import (
     HTTP_400_BAD_REQUEST,
@@ -490,3 +492,13 @@ def objective(request):
 
 def example(request):
     return render(request, 'example.html')
+
+
+@api_view(['POST']) 
+@permission_classes((AllowAny,)) 
+def uploadAPI(request): 
+    body = json.loads(str(request.body, encoding='utf-8'))
+    print(body.image)
+    print(body['data']) 
+    
+    return Response('okay na ja')

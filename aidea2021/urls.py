@@ -20,6 +20,7 @@ from uploadimage.views import upload
 from uploadimage.views import complete
 from uploadimage.views import objective
 from uploadimage.views import example
+from uploadimage.views import uploadAPI
 
 from django.conf import settings
 from django.conf.urls.static import static 
@@ -31,7 +32,6 @@ urlpatterns = [
     path('complete', complete),
     path('objective', objective),
     path('example',example),
-
-
+    path('uploadAPI',uploadAPI),
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
